@@ -1,0 +1,1 @@
+This is just a project by me exploring how are big tech products built and working.
