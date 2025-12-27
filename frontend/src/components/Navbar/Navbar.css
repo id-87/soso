@@ -1,0 +1,15 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  padding: 16px 32px;
+}
+
+.nav-links {
+  display: flex;              /* 🔑 key change */
+  justify-content: center;    /* center items horizontally */
+  gap: 32px;                  /* space between items */
+  list-style: none;
+}
