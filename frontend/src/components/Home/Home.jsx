@@ -6,8 +6,7 @@ const Home = () => {
   return (
     <div>
         
-      Home Page of soso
-      <Signup/>
+      Landing page of Soso
 
     </div>
   )

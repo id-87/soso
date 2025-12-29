@@ -17,6 +17,7 @@ const Signup = () => {
     e.preventDefault()
     if (cp.trim() === password.trim()){
       const resp=await axios.post(url,{firstName,lastName,email,password,phone,bio})
+      alert("User registered")
     console.log(resp)
 
     }
@@ -45,7 +46,7 @@ const Signup = () => {
             <br />
             <label>Bio <input type="text" value={bio} onChange={(e)=>setBio(e.target.value)} /></label>
             <br />
-            <button type='submit'>Submit</button>
+            <button type='submit'>Sign up</button>
         </form>
       
     </div>
