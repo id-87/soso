@@ -1,6 +1,7 @@
 const User=require('../models/User')
 const bcrypt=require('bcrypt')
 
+
 async function userRegister(req,res){
   const {firstName,lastName,password,phone,email,bio}=req.body
   if(!firstName||!lastName||!email||!password){
