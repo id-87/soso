@@ -18,6 +18,7 @@ async function userRegister(req,res){
       bio:bio
 
     });
+    
     res.status(201).json(user);
 
   }catch(err){

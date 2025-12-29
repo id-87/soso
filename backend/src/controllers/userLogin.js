@@ -26,6 +26,7 @@ async function userLogin(req,res){
       sameSite: "strict",
       secure: false, 
     });
+    
     res.send({"token":token})
             
         }
