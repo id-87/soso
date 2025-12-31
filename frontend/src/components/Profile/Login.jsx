@@ -9,6 +9,7 @@ const Login = () => {
     try{
       const resp=await axios.post(url,{username,password});
       alert("logged in")
+      localStorage.setItem("token", resp.data.token);
 
     }catch(err){
       console.log(err)
