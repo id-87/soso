@@ -1,11 +1,20 @@
 const mongoose=require('mongoose')
 const postSchema=new mongoose.Schema({
-    username:String,
-    title:String,
-    body:String
+    username:{
+        type:String,
+        required:true
+    },
+    title:{
+        type:String,
+        required:true
+    },
+    body:{
+        type:String,
+        required:true
+    }
 
 
 
 })
 
-module.exports=mongoose.model("User",userSchema)
+module.exports=mongoose.model("Post",postSchema)

@@ -26,11 +26,7 @@ async function userLogin(req,res){
     }
         if(match){
             const token=jwt.sign({username},JWT_SECRET)
-            res.cookie("token", token, {
-      httpOnly: true,
-      sameSite: "strict",
-      secure: false, 
-    });
+            
     
     res.status(200).send({"token":token})
             
