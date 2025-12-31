@@ -5,7 +5,7 @@ const url=import.meta.env.VITE_baseurl+'/users/register'
 const Signup = () => {
   const [firstName,setfn]=useState("")
   const [lastName,setln]=useState("")
-  const [email,setEmail]=useState("")
+  const [username,setUsername]=useState("")
   const [password,setPassword]=useState("")
   const [cp,setCp]=useState("")
   const [phone,setPhone]=useState("")
@@ -16,7 +16,7 @@ const Signup = () => {
   const register=async(e)=>{
     e.preventDefault()
     if (cp.trim() === password.trim()){
-      const resp=await axios.post(url,{firstName,lastName,email,password,phone,bio})
+      const resp=await axios.post(url,{firstName,lastName,username,password,phone,bio})
       alert("User registered")
     console.log(resp)
 
@@ -36,7 +36,7 @@ const Signup = () => {
             <br />
             <label>Last Name <input type="text" value={lastName} onChange={(e)=>setln(e.target.value)}/></label>
             <br />
-            <label>Email <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/></label>
+            <label>User Name <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}/></label>
             <br />
             <label>Password <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} /></label>
             <br />

@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import axios from 'axios'
 const url=import.meta.env.VITE_baseurl+'/users/login'
 const Login = () => {
-  const [email,setEmail]=useState("")
+  const [username,setUsername]=useState("")
   const [password,setPassword]=useState("")
   const submit = async(e)=>{
     e.preventDefault()
     try{
-      const resp=await axios.post(url,{email,password});
+      const resp=await axios.post(url,{username,password});
       alert("logged in")
 
     }catch(err){
@@ -21,7 +21,7 @@ const Login = () => {
   return (
     <div>
       <form className='login' onSubmit={submit}>
-        <label>Email: <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} /></label>
+        <label>User Name: <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)} /></label>
         <label>Password: <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} /></label>
         <button type='submit'>Login</button>
       </form>
