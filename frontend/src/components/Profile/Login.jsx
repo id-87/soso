@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-const url=import.meta.VITE_baseurl+'/users/login'
+const url=import.meta.env.VITE_baseurl+'/users/login'
 const Login = () => {
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
   const submit = async(e)=>{
     e.preventDefault()
     try{
-       const resp=await axios.post(url,{email,password})
-       alert("logged in")
+      const resp=await axios.post(url,{email,password});
+      alert("logged in")
+
     }catch(err){
       console.log(err)
       alert("Error logging in")
