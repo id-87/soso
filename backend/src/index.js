@@ -24,7 +24,4 @@ app.get('/health',(req,res)=>{
 app.use('/users',userRoutes)
 
 
-app.listen(3000,()=>{
-    console.log('running')
-})
-
+module.exports=app
