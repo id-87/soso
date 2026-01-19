@@ -31,6 +31,7 @@ const Signup = () => {
   }
   return (
     <div>
+      <h1>Register</h1>
         <form className='signup' onSubmit={register}>
             <label>First Name <input type="text" value={firstName} onChange={(e)=>setfn(e.target.value)}/></label>
             <br />

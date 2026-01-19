@@ -5,8 +5,9 @@ import Signup from '../Profile/Signup'
 const Home = () => {
   return (
     <div>
+      <h1>      Landing page of Soso
+</h1>
         
-      Landing page of Soso
 
     </div>
   )

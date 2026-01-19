@@ -9,7 +9,7 @@ const Messaging = () => {
   }
   return (
     <div>
-        <p>Private messaging of soso</p>
+        <h1>Private messaging of soso</h1>
       
     </div>
   )
