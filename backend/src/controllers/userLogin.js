@@ -10,6 +10,7 @@ async function userLogin(req,res){
     if(!username||!password){
         return res.status(400).send("Credentials are invalid or missing")
     }
+    console.log("Debugging 1")
     try{
         const resp=await User.findOne({username})
         // console.log(JWT_SECRET)

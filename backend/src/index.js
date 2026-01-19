@@ -24,7 +24,7 @@ app.get('/health',(req,res)=>{
 })
 
 app.use('/users',userRoutes)
-app.use('/posts',authMiddleware,postRoutes)
+app.use('/posts',postRoutes)
 
 
 module.exports=app
